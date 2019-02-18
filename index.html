@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>Oshare Clock</title>
+  </head>
+  <body>
+    <div id="app">
+      <!--
+      {{ message }}
+      <p><input type="text" v-model="currentTime"></p>
+      <p><input type="text" v-model="currentTime"></p>
+      <button type="button" class="btn btn-primary" v-on:click="hideForm">Start</button>
+    -->
+<!--ずれ量入力フォーム-->
+      <div class="form-box">
+        <form class="form-inline" v-show="form_toggle">
+          <!--Hour-->
+          <div class="input-group col-3 mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text">H</span>
+            </div>
+            <input type="text" class="form-control" placeholder="0" v-model="shift_H">
+          </div>
+          <!--Minute-->
+          <div class="input-group col-3 mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text">M</span>
+            </div>
+            <input type="text" class="form-control" placeholder="0" v-model="shift_M">
+          </div>
+          <!--Second-->
+          <div class="input-group col-3 mb-2 mr-sm-2">
+            <div class="input-group-prepend">
+              <span class="input-group-text">S</span>
+            </div>
+            <input type="text" class="form-control" placeholder="0" v-model="shift_S">
+          </div>
+
+          <!--  <button type="botton" class="btn btn-primary mb-2" v-on:click="hideForm">Start2</button> -->
+          <button type="button" class="btn btn-primary mb-2" v-on:click="hideForm">Start</button>
+        </div>
+      </form>
+<!--ずれ量入力フォーム END-->
+
+      <div class="current-time">{{ currentTime }}</div>
+
+
+<!--
+    <pre>{{ $data }}</pre>
+-->
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.24.0/min/moment.min.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+  </body>
+</html>>
